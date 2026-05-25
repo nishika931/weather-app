@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right,#218fef, #62b0f4, #00f2fe);
+  font-family: Arial, sans-serif;
+  background-image: url("./assets/bg.jpg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:100vh;
+
+}
+
+.container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  row-gap: 2px;
+}
+
+.block {
+  width: 350px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+
+.title {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.search input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+}
+
+.search {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.search input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+.search button {
+  padding: 12px 18px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.search button:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+.weather-information img {
+  width: 80px;
+}
+
+.weather-information h3 {
+  font-size: 40px;
+  margin: 10px 0;
+  color: white;
+}
+
+
+.weather-information p {
+  font-size: 18px;
+  color: white;
+}
+.error {
+  color:  #ff4d4d;
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+
+  .block {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .search {
+    flex-direction: column;
+  }
+
+  .search button {
+    width: 100%;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .weather-information h3 {
+    font-size: 32px;
+  }
+}
